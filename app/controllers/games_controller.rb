@@ -19,8 +19,6 @@ class GamesController < ApplicationController
     letters = params[:letters].split
     time_taken = Time.now - Time.parse(params[:time])
 
-    puts "TIME TAKEN: #{time_taken}"
-
     # Get an array with score and message, depending on the word provided, the available letters and
     # the time taken.
     message = compute_message(word, letters)
