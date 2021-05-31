@@ -1,0 +1,9 @@
+<h2>Result</h2>
+
+<p><%= @result[:message] %></p>
+
+<% if !@result[:invalid] %>
+  <p>Your score: <%= @result[:score] %></p>
+<% end %>
+
+<%= link_to 'Play again', new_path %>
