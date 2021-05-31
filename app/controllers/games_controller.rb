@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
   VOWELS = %w[A E I O U Y]
 
-  # get '/new', to: 'games#new'
+  # GET '/new', to: 'games#new'
   def new
     # An array with 5 random vowels
     @letters = Array.new(5) { VOWELS.sample }
@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     @letters = @letters.shuffle
   end
 
-  # post '/score', to: 'games#score'
+  # POST '/score', to: 'games#score'
   def score
     word = params[:word]
     letters = params[:letters].split
